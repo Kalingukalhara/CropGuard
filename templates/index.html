@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CropGuard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- ✅ Navigation Bar -->
+    <header class="navbar">
+        <h1>
+            <img src="{{ url_for('static', filename='tomato.png') }}" alt="Tomato Icon" class="logo-icon">
+            CropGuard
+        </h1>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/upload">Upload</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+            <div id="userWrapper" class="user-wrapper" style="display: none;">
+                <span id="userEmail"></span>
+                <button id="logoutButton">Logout</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ✅ Hero Section -->
+        <section class="hero-section">
+            <div class="hero-text">
+                <h2>Welcome to CropGuard</h2>
+                <p>A smart AI-powered system for detecting diseases in tomato plants. Built to help farmers and agronomists manage crops more efficiently.</p>
+                <a href="/upload" class="cta-btn">Get Started</a>
+            </div>
+            <div class="hero-image">
+                <img src="{{ url_for('static', filename='hero_image.jpg') }}" alt="AI Technology for Disease Detection">
+            </div>
+        </section>
+
+        <!-- ✅ Features Section -->
+        <section id="features" class="features-section">
+            <h2>How CropGuard Helps</h2>
+            <div class="feature-cards">
+                <div class="feature-card">
+                    <img src="{{ url_for('static', filename='upload_image_icon.png') }}" alt="Upload Image">
+                    <h3>Upload Image</h3>
+                    <p>Submit an image of a tomato leaf for fast AI-based diagnosis.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="{{ url_for('static', filename='disease_detection_icon.png') }}" alt="Disease Detection">
+                    <h3>Disease Detection</h3>
+                    <p>Uses trained machine learning models to accurately classify diseases.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="{{ url_for('static', filename='treatment_suggestion_icon.png') }}" alt="Treatment Suggestions">
+                    <h3>Treatment Suggestions</h3>
+                    <p>Provides treatment options to help you take the next step confidently.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ✅ Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 CropGuard. All rights reserved.</p>
+    </footer>
+
+    <!-- ✅ Firebase Auth Support -->
+    <script type="module" src="{{ url_for('static', filename='js/auth.js') }}"></script>
+</body>
+</html>
